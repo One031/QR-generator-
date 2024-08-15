@@ -1,0 +1,94 @@
+body {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+h1 {
+  color: antiquewhite;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+}
+
+.title-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.url-container {
+  margin-top: 165px;
+  text-align: center;
+}
+
+.txtUrl {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  border-bottom: 3px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  width: 400px;
+  height: 25px;
+  color: antiquewhite;
+}
+
+.top {
+  margin-right: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: antiquewhite;
+}
+
+.bottom {
+  margin-top: 5px;
+  margin-right: 263px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(7, 7, 7);
+}
+
+input{
+  margin-left: 10px;
+  height: 33px;
+  width: 75px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgba(12, 8, 8, 0.382);
+  border: solid rgba(0, 0, 0, 0.707) 1px;
+  color: antiquewhite;
+}
+
+.pressed {
+  opacity: 0.8;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.qr-container{
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  width: 225px;
+  height: 225px;
+}
+
+.adjusted-margin{
+  margin-top: 0px
+}
+
+.button:hover{
+  background-color: rgba(36, 28, 28, 0.382);
+  cursor: pointer;
+}
+
+.button:focus{
+  background-color: rgba(0, 0, 0, 0.572);
+}
