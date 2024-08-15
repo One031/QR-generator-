@@ -29,6 +29,10 @@ h1 {
     width: 95%;
   }
 
+  .txtUrl{
+    width: 200px;
+  }
+
   .button{
     margin-top: 10px;
     margin-left: 20px;
@@ -44,8 +48,8 @@ h1 {
     width: 100%;
   }
 
-  .navbar {
-    flex-direction: column;
+  .txtUrl{
+    width: 200px;
   }
 
   .button{
