@@ -1,6 +1,11 @@
 body {
   background-color: rgba(0, 0, 0, 0.87);
 }
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
 
 h1 {
   color: antiquewhite;
@@ -13,6 +18,46 @@ h1 {
 .title-container {
   margin-top: 15px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .button{
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .button{
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: -120px;
 }
 
 .url-container {
@@ -61,24 +106,18 @@ input{
   color: antiquewhite;
 }
 
-.pressed {
-  opacity: 0.8;
-}
-
-footer {
-  position: absolute;
+footer{
+  position: relative;
   bottom: 0;
 }
+
 
 .qr-container{
   display: flex;
   justify-content: center;
 }
 
-img{
-  width: 225px;
-  height: 225px;
-}
+
 
 .adjusted-margin{
   margin-top: 0px
