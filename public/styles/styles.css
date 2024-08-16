@@ -45,11 +45,13 @@ h1 {
   }
 
   .container {
-    width: 100%;
+    max-width: 95%;
+    margin-top: 25%;
+    padding: 10px;
   }
 
   .txtUrl{
-    width: 100px;
+    max-width: 95%;
   }
 
   .button{
