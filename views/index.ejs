@@ -1,30 +1,77 @@
+<!-- Include the header partial -->
 <%- include("partials/header.ejs") %>
 
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and other head elements should ideally be in the header partial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
 
-        <div class="title-container">
-            <h1>QR Code Generator</h1>
-        </div>
+    <!-- Container for the page title -->
+    <div class="title-container">
+        <h1>QR Code Generator</h1>
+    </div>
 
-        <div class="qr-container">
-            <% if (locals.qrPng) { %>
-                <img src="<%= qrPng %>" >
-            <% } %>
-        </div>
+    <!-- Container to display the generated QR code image -->
+    <div class="qr-container">
+        <!-- 
+            Check if 'qrPng' variable is passed from the server.
+            If it exists, display the QR code image.
+            'qrPng' should contain the relative path to the generated QR image.
+        -->
+        <% if (locals.qrPng) { %>
+            <img src="<%= qrPng %>" alt="Generated QR Code">
+        <% } %>
+    </div>
 
-        <div class="url-container">
-            <p class="top">Enter an already existing url to generate your QR</p>
-            <form action="/submit" method="POST">
-                <input class="txtUrl" id="url" name="url" type="text" placeholder="Enter url.." required>
-                <input class="button" type="submit" value="Generate">
-            </form>
-            <p class="bottom">Example: http:www.example.com</p>
-        </div>
+    <!-- Container for the URL input form -->
+    <div class="url-container">
+        <!-- Instructional text for the user -->
+        <p class="top">Enter an already existing URL to generate your QR</p>
+        
+        <!-- 
+            Form for users to input a URL.
+            Submits a POST request to the '/submit' route defined in your Express.js server.
+        -->
+        <form action="/submit" method="POST">
+            <!-- 
+                Text input for the URL.
+                - 'name' attribute is 'url' to match the server-side request handler.
+                - 'required' attribute ensures the field is not left empty.
+            -->
+            <input class="txtUrl" id="url" name="url" type="text" placeholder="Enter URL.." required>
+            
+            <!-- 
+                Submit button to generate the QR code.
+                - When clicked, it submits the form data to the server.
+            -->
+            <input class="button" type="submit" value="Generate">
+        </form>
+        
+        <!-- Example URL to guide the user -->
+        <p class="bottom">Example: http://www.example.com</p>
+    </div>
 
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="index.js" type="module"></script>
-    </body>
+    <!-- 
+        Include jQuery from a CDN.
+        jQuery is a popular JavaScript library that simplifies DOM manipulation, event handling, etc.
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- 
+        Link to custom JavaScript file.
+        - 'type="module"' allows the use of ES6 modules in JavaScript code.
+    -->
+    <script src="/index.js" type="module"></script>
+    
+</body>
 </html>
 
+<!-- Include the footer partial -->
 <%- include("partials/footer.ejs") %>
